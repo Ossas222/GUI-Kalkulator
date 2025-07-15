@@ -395,12 +395,10 @@ public class FrameKalkulator extends javax.swing.JFrame {
 
     private void zeroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zeroButtonActionPerformed
         // TODO add your handling code here:
-        String text = textFieldKalkulator.getText();
-        if (text.length() == 1 && text.charAt(0) == '0')
-        {
-            
+        if (numberText.getText().equals("0")) {
+            numberText.setText("0");
         } else {
-            calcNumber("0");
+           numberText.setText(numberText.getText() + "0"); 
         }
         
     }//GEN-LAST:event_zeroButtonActionPerformed
