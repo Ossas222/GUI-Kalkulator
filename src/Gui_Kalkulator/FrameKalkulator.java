@@ -389,59 +389,105 @@ public class FrameKalkulator extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_komaButtonActionPerformed
 
-    private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
+    private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {                                             
         // TODO add your handling code here:
-    }//GEN-LAST:event_deleteButtonActionPerformed
-
-    private void zeroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zeroButtonActionPerformed
-        // TODO add your handling code here:
-        String text = textFieldKalkulator.getText();
-        if (text.length() == 1 && text.charAt(0) == '0')
-        {
-            
+        String current = numberText.getText();
+        if (current.length() > 1) {
+            numberText.setText(current.substring(0, (current.length() - 1)));
         } else {
-            calcNumber("0");
+            numberText.setText("0");
         }
-        
-    }//GEN-LAST:event_zeroButtonActionPerformed
+    }                                            
 
-    private void oneButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oneButtonActionPerformed
+    private void zeroButtonActionPerformed(java.awt.event.ActionEvent evt) {                                           
         // TODO add your handling code here:
-        calcNumber("1");
-    }//GEN-LAST:event_oneButtonActionPerformed
+        if (numberText.getText().equals("0")) {
+            numberText.setText("0");
+        } else {
+           numberText.setText(numberText.getText() + "0"); 
+        }
+    }                                          
 
-    private void twoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_twoButtonActionPerformed
+    private void oneButtonActionPerformed(java.awt.event.ActionEvent evt) {                                          
         // TODO add your handling code here:
-    }//GEN-LAST:event_twoButtonActionPerformed
+        if (numberText.getText().equals("0")) {
+            numberText.setText("1");
+        } else {
+           numberText.setText(numberText.getText() + "1"); 
+        }
+    }                                         
 
-    private void threeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_threeButtonActionPerformed
+    private void twoButtonActionPerformed(java.awt.event.ActionEvent evt) {                                          
         // TODO add your handling code here:
-    }//GEN-LAST:event_threeButtonActionPerformed
+        if (numberText.getText().equals("0")) {
+            numberText.setText("2");
+        } else {
+            numberText.setText(numberText.getText() + "2");
+        }
+    }                                         
 
-    private void fourButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fourButtonActionPerformed
+    private void threeButtonActionPerformed(java.awt.event.ActionEvent evt) {                                            
         // TODO add your handling code here:
-    }//GEN-LAST:event_fourButtonActionPerformed
+        if (numberText.getText().equals("0")) {
+            numberText.setText("3");
+        } else {
+            numberText.setText(numberText.getText() + "3");
+        }
+    }                                           
 
-    private void fiveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fiveButtonActionPerformed
+    private void fourButtonActionPerformed(java.awt.event.ActionEvent evt) {                                           
         // TODO add your handling code here:
-    }//GEN-LAST:event_fiveButtonActionPerformed
+        if (numberText.getText().equals("0")) {
+            numberText.setText("4");
+        } else {
+            numberText.setText(numberText.getText() + "4");
+        }
+    }                                          
 
-    private void sixButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sixButtonActionPerformed
+    private void fiveButtonActionPerformed(java.awt.event.ActionEvent evt) {                                           
         // TODO add your handling code here:
-    }//GEN-LAST:event_sixButtonActionPerformed
+        if (numberText.getText().equals("0")) {
+            numberText.setText("5");
+        } else {
+            numberText.setText(numberText.getText() + "5");
+        }
+    }                                          
 
-    private void sevenButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sevenButtonActionPerformed
+    private void sixButtonActionPerformed(java.awt.event.ActionEvent evt) {                                          
         // TODO add your handling code here:
-    }//GEN-LAST:event_sevenButtonActionPerformed
+        if (numberText.getText().equals("0")) {
+            numberText.setText("6");
+        } else {
+            numberText.setText(numberText.getText() + "6");
+        }
+    }                                         
 
-    private void eightButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eightButtonActionPerformed
+    private void sevenButtonActionPerformed(java.awt.event.ActionEvent evt) {                                            
         // TODO add your handling code here:
-    }//GEN-LAST:event_eightButtonActionPerformed
+        if (numberText.getText().equals("0")) {
+            numberText.setText("7");
+        } else {
+            numberText.setText(numberText.getText() + "7");
+        }
+    }                                           
 
-    private void nineButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nineButtonActionPerformed
+    private void eightButtonActionPerformed(java.awt.event.ActionEvent evt) {                                            
         // TODO add your handling code here:
-    }//GEN-LAST:event_nineButtonActionPerformed
+        if (numberText.getText().equals("0")) {
+            numberText.setText("8");
+        } else {
+            numberText.setText(numberText.getText() + "8");
+        }
+    }                                           
 
+    private void nineButtonActionPerformed(java.awt.event.ActionEvent evt) {                                           
+        // TODO add your handling code here:
+        if (numberText.getText().equals("0")) {
+            numberText.setText("9");
+        } else {
+            numberText.setText(numberText.getText() + "9");
+        }
+    }
     /**
      * @param args the command line arguments
      */
