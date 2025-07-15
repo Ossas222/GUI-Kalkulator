@@ -389,21 +389,24 @@ public class FrameKalkulator extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_komaButtonActionPerformed
 
-    private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
+    private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {                                             
         // TODO add your handling code here:
-    }//GEN-LAST:event_deleteButtonActionPerformed
-
-    private void zeroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zeroButtonActionPerformed
-        // TODO add your handling code here:
-        String text = textFieldKalkulator.getText();
-        if (text.length() == 1 && text.charAt(0) == '0')
-        {
-            
+        String current = numberText.getText();
+        if (current.length() > 1) {
+            numberText.setText(current.substring(0, (current.length() - 1)));
         } else {
-            calcNumber("0");
+            numberText.setText("0");
         }
-        
-    }//GEN-LAST:event_zeroButtonActionPerformed
+    }                                            
+
+    private void zeroButtonActionPerformed(java.awt.event.ActionEvent evt) {                                           
+        // TODO add your handling code here:
+        if (numberText.getText().equals("0")) {
+            numberText.setText("0");
+        } else {
+           numberText.setText(numberText.getText() + "0"); 
+        }
+    }
 
     private void oneButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oneButtonActionPerformed
         // TODO add your handling code here:
